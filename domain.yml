@@ -1,33 +1,46 @@
 version: "3.1"
 
 intents:
+  - verfahren_wundreinigung
+  - anatomie_verdauungssystem
+  - hygiene_verbandwechsel
+  - infos_demenz
+  - infos_sepsis
   - greet
   - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - thank
 
 responses:
+  utter_wundreinigung:
+  - text: "Zur Reinigung von Wunden können sterile Kochsalzlösung, antiseptische Lösungen oder Wundspülungen verwendet werden. "
+
+  utter_anatomie:
+  - text: "Das Verdauungssystem besteht aus dem Mund, der Speiseröhre, dem Magen, dem Dünndarm, dem Dickdarm und dem Rektum. Es ist für die Aufnahme und Verarbeitung von Nahrung und Flüssigkeiten verantwortlich."
+
+  utter_verbandwechsel:
+  - text: "Jeder Verbandwechsel ist aseptisch durchzuführen. Es muss hygienisch einwandfrei gearbeitet und jede Keimverschleppung vermieden werden. Nur so kann man den Pflegeempfänger, sich selbst und andere vor Kontaminationen und Infektionen schützen."
+
+  utter_demenz:
+  - text: "Demenz beschreibt den erworbenen und langfristigen Abbau intellektueller Leistungen. Sensorische und motorische Fertigkeiten bleiben erhalten. Auch Persönlichkeitsverän derungen sind Teil des vielfältigen Syndrombildes."
+
+  utter_sepsis:
+  - text: "Eine Sepsis, umgangssprachlich auch Blutvergiftung, ist eine Infektion, die mit einer systemischen entzündlichen Abwehrreaktion einhergeht."
+
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
+  - text: Hey, wie kann ich dir helfen?
+  - text: Hey, was kann ich für dich tun?
 
   utter_goodbye:
-  - text: "Bye"
+  - text: Hab einen schönen Tag und bis bald!
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_you_are_welcome:
+  - text: Bitte sehr.
+  - text: Es ist immer schön, hilfreich zu sein.
+
+  utter_fallback_apology:
+  - text: Entschuldigung, das habe ich nicht verstanden. Kannst du das bitte wiederholen? 
+
+
 
 session_config:
   session_expiration_time: 60

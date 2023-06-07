@@ -2,29 +2,32 @@ version: "3.1"
 
 stories:
 
-- story: happy path
+- story: greet
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
 
-- story: sad path 1
+- story: ask_wundreinigung
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - intent: verfahren_wundreinigung
+  - action: utter_wundreinigung
 
-- story: sad path 2
+- story: ask_anatomie
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - intent: anatomie_verdauungssystem
+  - action: utter_anatomie
+
+- story: ask_verbandwechsel
+  steps:
+  - intent: hygiene_verbandwechsel
+  - action: utter_verbandwechsel
+
+- story: ask_demenz
+  steps:
+  - intent: infos_demenz
+  - action: utter_demenz
+
+- story: ask_sepsis
+  steps:
+  - intent: infos_sepsis
+  - action: utter_sepsis
