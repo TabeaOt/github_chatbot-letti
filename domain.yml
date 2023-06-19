@@ -1,30 +1,30 @@
 version: "3.1"
 
 intents:
-  - verfahren_wundreinigung
-  - anatomie_verdauungssystem
-  - hygiene_verbandwechsel
-  - infos_demenz
-  - infos_sepsis
+  - was_sepsis
+  - was_sepsiserreger
+  - welche_risikofaktoren
+  - welche_symptome
+  - welche_spaetfolgen
   - greet
   - goodbye
   - thank
 
 responses:
-  utter_wundreinigung:
-  - text: "Zur Reinigung von Wunden können sterile Kochsalzlösung, antiseptische Lösungen oder Wundspülungen verwendet werden. "
-
-  utter_anatomie:
-  - text: "Das Verdauungssystem besteht aus dem Mund, der Speiseröhre, dem Magen, dem Dünndarm, dem Dickdarm und dem Rektum. Es ist für die Aufnahme und Verarbeitung von Nahrung und Flüssigkeiten verantwortlich."
-
-  utter_verbandwechsel:
-  - text: "Jeder Verbandwechsel ist aseptisch durchzuführen. Es muss hygienisch einwandfrei gearbeitet und jede Keimverschleppung vermieden werden. Nur so kann man den Pflegeempfänger, sich selbst und andere vor Kontaminationen und Infektionen schützen."
-
-  utter_demenz:
-  - text: "Demenz beschreibt den erworbenen und langfristigen Abbau intellektueller Leistungen. Sensorische und motorische Fertigkeiten bleiben erhalten. Auch Persönlichkeitsverän derungen sind Teil des vielfältigen Syndrombildes."
-
-  utter_sepsis:
+  utter_was_sepsis:
   - text: "Eine Sepsis, umgangssprachlich auch Blutvergiftung, ist eine Infektion, die mit einer systemischen entzündlichen Abwehrreaktion einhergeht."
+
+  utter_was_sepsiserreger:
+  - text: "Die häufigsten Sepsiserreger sind Bakterien. Am häufigsten gehen bakterielle Infektionen der Atemwege, des Verdauungstrakts und des Urogenitaltrakts mit einer Sepsis einher, Risikofaktoren sind Alter, Abwehrschwäche, Vorerkrankung und Eingriffe in den Körper, der Erregern als Eintrittspforte dient. Aber grundsätzlich kann jede bakterielle Infektion in eine Sepsis münden."
+
+  utter_welche_risikofaktoren:
+  - text: "Risikofaktoren sind Alter, Abwehrschwäche, Vorerkrankung und Eingriffe in den Körper, der Erregern als Eintrittspforte dient."
+
+  utter_welche_symptome:
+  - text: "Das häufigste Symptom bei Sepsis ist Fieber, das typischerweise plötzlich auftritt und häufig mit Schüttelfrost einhergeht. Andere Symptome sind zum Beispiel: niedriger Blutdruck, ausgeprägtes Krankheitsgefühl oder beschleunigter Atem. Allerdings können die Symptome in jedem individuellen Fall variieren."
+
+  utter_welche_spaetfolgen:
+  - text: "Wenn der Patient die Sepsis überlebt, hat er häufig unter Spätfolgen wie Gedächtnisstörungen , eingeschränktem Lernvermögen, Depression, Angst- und Schlafstörungen, Leistungsminderung, Nervenschmerzen (Polyneuropathie) und Schmerzen zu leiden."
 
   utter_greet:
   - text: Hey, wie kann ich dir helfen?

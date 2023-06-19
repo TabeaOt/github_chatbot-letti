@@ -1,165 +1,71 @@
-version: '3.1'
+version: "3.1"
+
 nlu:
-  - intent: verfahren_wundreinigung
-    examples: >
-      - Welche Verfahren können zur Reinigung von Wunden verwendet werden?
-
-      - Wie können Wunden gereinigt werden?
-
-      - Was können Verfahren sein, um eine Wunde zu reinigen?
-
-      - Wie kann man Wunden reinigen?
-
-      - Wie sollten Wunden gereinigt werden?
-
-      - Wie sollte man vorgehen, um Wunden zu reinigen?
-
-      - Wie sollte verfahren werden, um Wunden zu reinigen?
-
-      - Welche Methoden werden zur Säuberung von Wunden angewendet?
-
-      - Welche Techniken stehen zur Verfügung, um Wunden zu reinigen?
-
-      - Welche Verfahren können zur Desinfektion von Wunden genutzt werden?
-
-      - Welche Möglichkeiten gibt es, um Wunden hygienisch zu reinigen?
-
-      - Welche Methoden werden angewendet, um Wunden zu säubern und zu
-      desinfizieren?
-
-      - Welche Techniken sind bekannt, um Wunden gründlich zu reinigen?
-
-      - Welche Verfahren stehen zur Verfügung, um Wunden zu reinigen?
-
-      - Welche Möglichkeiten existieren, um Verletzungen effektiv zu säubern?
-
-      - Welche Methoden werden in der Wundreinigung eingesetzt?
-
-      - Welche Verfahren der Wundreinigung gibt es?
-
-      - Welche Techniken sind üblich, um Verletzungen von potenziell schädlichen
-      Bakterien zu reinigen?		
-  - intent: anatomie_verdauungssystem
-    examples: >
-      - Welche Organe sind Teil des Verdauungssystems und welche Funktion haben
-      sie?
-
-      - Welche Organe gehören zum Verdauungssystem und welche Aufgaben erfüllen
-      sie?
-
-      - Welche Organe sind im Verdauungssystem enthalten und was ist ihre
-      jeweilige Funktion?
-
-      - Welche Funktionen erfüllen die verschiedenen Organe des
-      Verdauungssystems?
-
-      - Welche Aufgaben haben die einzelnen Organe im Verdauungssystem?
-
-      - Welche Organe sind an der Verdauung beteiligt und welche Funktion haben
-      sie?
-
-      - Was sind die Funktionen der Organe, die das Verdauungssystem bilden?
-
-      - Welche Aufgaben haben die unterschiedlichen Organe im Verdauungstrakt?
-
-      - Welche Funktionen erfüllen die verschiedenen Bestandteile des
-      Verdauungssystems?
-
-      - Welche Rolle spielen die einzelnen Organe bei der Verdauung?
-
-      - Was sind die spezifischen Funktionen der Organe, die das
-      Verdauungssystem ausmachen?
-
-      - Welche Aufagbe erfülen die Organe des Verdauungssystems?
-
-      - Welche Organe gehören zum Verdauungssystem und welche Aufgaben haben
-      sie?
-  - intent: hygiene_verbandwechsel
-    examples: >
-      - Wie sind Verbandwechsel in Hinblick auf die Hygiene durchzuführen?
-
-      - Wie sind Verbandwechsel durchzuführen?
-
-      - Wie sollten Verbandwechsel durchgeführt werden?
-
-      - Wie sollte ein Verband gewechselt werden?
-
-      - Was sind die empfohlenen hygienischen Maßnahmen bei einem
-      Verbandswechsel?
-
-      - Welche hygienischen Richtlinien sollten beim Wechseln von Verbänden
-      beachtet werden?
-
-      - Wie kann man sicherstellen, dass Verbandswechsel hygienisch durchgeführt
-      werden?
-
-      - Welche Schritte sind erforderlich, um einen Verbandswechsel unter
-      hygienischen Gesichtspunkten korrekt durchzuführen?
-
-      - Welche Maßnahmen sollten ergriffen werden, um die Hygiene beim Wechseln
-      von Verbänden zu gewährleisten?
-
-      - Was sind die grundlegenden Hygienepraktiken, die bei einem
-      Verbandswechsel zu befolgen sind?
-
-      - Welche hygienischen Vorsichtsmaßnahmen sind wichtig, um Infektionen
-      während eines Verbandswechsels zu vermeiden?
-
-      - Wie kann man sicherstellen, dass ein Verbandswechsel unter hygienischen
-      Bedingungen erfolgt?
-
-      - Welche Hygienevorkehrungen sollten bei Verbandswechseln berücksichtigt
-      werden, um Infektionen zu verhindern?
-
-      - Welche Maßnahmen sind notwendig, um einen Verbandswechsel hygienisch
-      einwandfrei durchzuführen?
-  - intent: infos_demenz
-    examples: >
-      - Was ist Demenz?
-
-      - Wie beschreibt man Demenz?
-
-      - Wie würde man Alzheimer Demenz definieren?
-
-      - Was bedeutet Alzheimer Demenz?
-
-      - Was versteht man unter Demenz?
-
-      - Wie wird der Begriff Demenz definiert?
-
-      - Was genau bedeutet der Begriff Demenz?
-
-      - Was ist die genaue Bedeutung von Demenz?
-
-      - Welche Definition liegt dem Begriff Demenz zugrunde?
-
-      - Wie wird der Begriff Demenz im medizinischen Kontext beschrieben?
-
-      - Was versteht man unter Demenz im Zusammenhang mit neurologischen
-      Erkrankungen?
-
-      - Wie wird der Begriff Demenz in Bezug auf kognitive Beeinträchtigungen
-      erklärt?
-
-      - Was ist die genaue Definition von Demenz?
-
-      - Was sind die präzisen Merkmale, die mit dem Begriff Demenz verbunden
-      sind?
-
-      - Wie wird der medizinische Begriff Demenz in Bezug auf Gedächtnisverlust
-      und kognitive Funktionen erklärt?
-  - intent: infos_sepsis
+  - intent: was_sepsis
     examples: |
       - Was ist eine Sepsis?
-      - Was ist eine Blutvergiftung?
-      - Was ist die genaue Definition einer Sepsis?
-      - Wie definiert man Sepsis?
-      - Wie wird der Begriff "Sepsis" genau erklärt?
-      - Was versteht man unter dem medizinischen Ausdruck "Sepsis"?
-      - Wie wird eine Sepsis präzise definiert?
-      - Was versteht man unter einer Sepsis?
-      - Wie wird der medizinische Zustand "Sepsis" beschrieben?
-      - Was ist die Bedeutung von "Sepsis" im medizinischen Kontext?
-      - Wie kann Sepsis erklärt werden?
-      - Wie wird der medizinische Begriff "Sepsis" beschrieben?
-      - Wie lässt sich eine Sepsis kurz erklären?
+      - Was ist unter Sepsis zu verstehen?
+      - Kannst du mir den medizinischen Begriff „Sepsis“ näher erläutern?
+      - Wie wird Sepsis definiert?
+      - Kannst du mir sagen, was eine Sepsis genau ist?
+      - Wie wird der Begriff Sepsis im medizinischen Kontext definiert?
+      - Kannst du mir die Definition von Sepsis sagen?
+      - Kannst du mir erklären, was eine Sepsis ist?
+      - Was bedeutet der Begriff „Sepsis“?
+      - Was beschreibt eine Sepsis?
+
+  - intent: was_sepsiserreger
+    examples: |
+      - Was sind Sepsiserreger?
+      - Welche Sepsiserreger gibt es?
+      - Was versteht man unter dem Begriff „Sepsiserreger“?
+      - Was sind Beispiele für Sepsiserreger?
+      - Welche Mikroorganismen gelten als Sepsiserreger?
+      - Kannst du mir Beispiele für Sepsiserreger nennen?
+      - Kannst du mir kurz erklären, welche Sepsiserreger es gibt?
+      - Wie werden Sepsiserreger beschrieben?
+      - Wie werden Sepsiserreger definiert?
+      - Welche Erreger können eine Sepsis verursachen?
+      - Was sind Erreger für eine Sepsis?
+
+  - intent: welche_risikofaktoren
+    examples: |
+      - Welche Risikofaktoren für Sepsis gibt es?
+      - Welche Faktoren erhöhen das Risiko, eine Sepsis zu entwickeln?
+      - Kannst du mir verschiedene Risikofaktoren der Sepsis aufzeigen
+      - Was sind Risikofaktoren für eine Sepsis?
+      - Welche Faktoren erhöhen die Wahrscheinlichkeit, an einer Sepsis zu erkranken?
+      - Welche Risikofaktoren machen eine Person anfälliger für eine Sepsis?
+      - Welche Faktoren machen eine Person anfälliger für eine Sepsis?
+      - Kannst du mir die Risikofaktoren nennen, die das Auftreten einer Sepsis begünstigen?
+      - Welche Faktoren spielen eine Rolle bei der Entstehung einer Sepsis?
+      - Welche Faktoren beeinflussen die Gefährdung an einer Sepsis zu erkranken?
+      - Was sind Risikofaktoren, die zu einer Sepsis führen können?
+      - Welche Faktoren tragen zu einem erhöhten Sepsis- Risiko bei?
+
+  - intent: welche_symptome
+    examples: |
+      - Welche Symptome treten bei einer Sepsis auf?
+      - Welche Anzeichen deuten auf das Vorliegen einer Sepsis hin?
+      - Kannst du mir die typischen Symptome einer Sepsis beschreiben?
+      - Was sind die häufigsten Symptome, die bei einer Sepsis auftreten können?
+      - Kannst du mir die charakteristischen Anzeichen einer Sepsis nennen?
+      - Welche körperlichen Symptome sind typisch für eine Sepsis?
+      - Was sind die klinischen Merkmale einer Sepsis?
+      - Könntest du mir die Symptome einer Sepsis sagen?
+      - Auf welche Symptome sollte man bei einer Sepsis achten?
+      - Welche Symptome deuten auf eine Sepsis hin?
+
+  - intent: welche_spaetfolgen
+    examples: |
+      - Können nach einer Sepsis Spätfolgen auftreten?
+      - Gibt es mögliche Langzeitfolgen nach einer überstandenen Sepsis?
+      - Können sich nach einer Sepsis langfristige gesundheitliche Auswirkungen zeigen?
+      - Welche Spätfolgen können nach einer Sepsis auftreten?
+      - Gibt es potenzielle Spätfolgen nach einer Sepsis?
+      - Kann es nach einer Sepsis zu Spätfolgen kommen?
+      - Gibt es Risiken für Spätfolgen nach einer überstandenen Sepsis?
+      - Können sich nach einer Sepsis Spätfolgen, wie körperliche oder geistige Beeinträchtigungen zeigen?
+      - Welche Spätfolgen können nach einer Sepsis auftreten?
+      - Besteht die Möglichkeit von Spätfolgen nach einer Sepsis?
+      - Welche Spätfolgen nach einer Sepsis bestehen bleiben?

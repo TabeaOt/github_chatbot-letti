@@ -7,27 +7,27 @@ stories:
   - intent: greet
   - action: utter_greet
 
-- story: ask_wundreinigung
+- story: was_sepsis
   steps:
-  - intent: verfahren_wundreinigung
-  - action: utter_wundreinigung
+  - intent: was_sepsis
+  - action: utter_was_sepsis
 
-- story: ask_anatomie
+- story: was_sepsiserreger
   steps:
-  - intent: anatomie_verdauungssystem
-  - action: utter_anatomie
+  - intent: was_sepsiserreger
+  - action: utter_was_sepsiserreger
 
-- story: ask_verbandwechsel
+- story: welche_risikofaktoren
   steps:
-  - intent: hygiene_verbandwechsel
-  - action: utter_verbandwechsel
+  - intent: welche_risikofaktoren
+  - action: utter_welche_risikofaktoren
 
-- story: ask_demenz
+- story: welche_symptome
   steps:
-  - intent: infos_demenz
-  - action: utter_demenz
+  - intent: welche_symptome
+  - action: utter_welche_symptome
 
-- story: ask_sepsis
+- story: welche_spaetfolgen
   steps:
-  - intent: infos_sepsis
-  - action: utter_sepsis
+  - intent: welche_spaetfolgen
+  - action: utter_welche_spaetfolgen
