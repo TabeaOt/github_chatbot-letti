@@ -10,24 +10,35 @@ stories:
 - story: was_sepsis
   steps:
   - intent: was_sepsis
+  - action: action_count_intent
   - action: utter_was_sepsis
 
 - story: was_sepsiserreger
   steps:
   - intent: was_sepsiserreger
-  - action: utter_was_sepsiserreger
+  - action: action_count_intent
+  - slot_was_set:
+    - num_intent_sepsiserreger: 1
+  - action: action_error_sepsiserreger
 
 - story: welche_risikofaktoren
   steps:
   - intent: welche_risikofaktoren
-  - action: utter_welche_risikofaktoren
+  - action: action_count_intent
+  - slot_was_set:
+    - num_intent_risikofaktoren: 1
+  - action: action_error_risikofaktoren
 
 - story: welche_symptome
   steps:
   - intent: welche_symptome
+  - action: action_count_intent
   - action: utter_welche_symptome
 
 - story: welche_spaetfolgen
   steps:
   - intent: welche_spaetfolgen
-  - action: utter_welche_spaetfolgen
+  - action: action_count_intent
+  - slot_was_set:
+    - num_intent_spaetfolgen: 2
+  - action: action_error_spaetfolgen

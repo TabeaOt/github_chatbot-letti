@@ -21,6 +21,7 @@ nlu:
       - Hey
       - Hallo
       - hallo bot
+      - huhu
       
 
   - intent: goodbye

@@ -10,21 +10,44 @@ intents:
   - goodbye
   - thank
 
+actions:
+  - action_count_intent
+  - action_error_sepsiserreger
+  - action_error_risikofaktoren
+  - action_error_spaetfolgen
+
+slots:
+  num_intent_sepsiserreger:
+    type: float
+    initial_value: 0
+    mappings:
+    - type: custom
+  num_intent_risikofaktoren:
+    type: float
+    initial_value: 0
+    mappings:
+    - type: custom
+  num_intent_spaetfolgen:
+    type: float
+    initial_value: 0
+    mappings:
+    - type: custom
+
 responses:
   utter_was_sepsis:
   - text: "Eine Sepsis, umgangssprachlich auch Blutvergiftung, ist eine Infektion, die mit einer systemischen entzündlichen Abwehrreaktion einhergeht."
 
-  utter_was_sepsiserreger:
-  - text: "Die häufigsten Sepsiserreger sind Bakterien. Am häufigsten gehen bakterielle Infektionen der Atemwege, des Verdauungstrakts und des Urogenitaltrakts mit einer Sepsis einher, Risikofaktoren sind Alter, Abwehrschwäche, Vorerkrankung und Eingriffe in den Körper, der Erregern als Eintrittspforte dient. Aber grundsätzlich kann jede bakterielle Infektion in eine Sepsis münden."
+  # utter_was_sepsiserreger:
+  # - text: "Die häufigsten Sepsiserreger sind Bakterien. Am häufigsten gehen bakterielle Infektionen der Atemwege, des Verdauungstrakts und des Urogenitaltrakts mit einer Sepsis einher, Risikofaktoren sind Alter, Abwehrschwäche, Vorerkrankung und Eingriffe in den Körper, der Erregern als Eintrittspforte dient. Aber grundsätzlich kann jede bakterielle Infektion in eine Sepsis münden."
 
-  utter_welche_risikofaktoren:
-  - text: "Risikofaktoren sind Alter, Abwehrschwäche, Vorerkrankung und Eingriffe in den Körper, der Erregern als Eintrittspforte dient."
+  # utter_welche_risikofaktoren:
+  # - text: "Risikofaktoren sind Alter, Abwehrschwäche, Vorerkrankung und Eingriffe in den Körper, der Erregern als Eintrittspforte dient."
 
   utter_welche_symptome:
   - text: "Das häufigste Symptom bei Sepsis ist Fieber, das typischerweise plötzlich auftritt und häufig mit Schüttelfrost einhergeht. Andere Symptome sind zum Beispiel: niedriger Blutdruck, ausgeprägtes Krankheitsgefühl oder beschleunigter Atem. Allerdings können die Symptome in jedem individuellen Fall variieren."
 
-  utter_welche_spaetfolgen:
-  - text: "Wenn der Patient die Sepsis überlebt, hat er häufig unter Spätfolgen wie Gedächtnisstörungen , eingeschränktem Lernvermögen, Depression, Angst- und Schlafstörungen, Leistungsminderung, Nervenschmerzen (Polyneuropathie) und Schmerzen zu leiden."
+  # utter_welche_spaetfolgen:
+  # - text: "Wenn der Patient die Sepsis überlebt, hat er häufig unter Spätfolgen wie Gedächtnisstörungen , eingeschränktem Lernvermögen, Depression, Angst- und Schlafstörungen, Leistungsminderung, Nervenschmerzen (Polyneuropathie) und Schmerzen zu leiden."
 
   utter_greet:
   - text: Hey, wie kann ich dir helfen?
