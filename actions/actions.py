@@ -46,10 +46,10 @@ class ActionErrorSepsiserreger(Action):
 
 		slot = tracker.get_slot("num_intent_sepsiserreger")
 		if slot < 2:
-			dispatcher.utter_message(text="Meinst du:") # apology / no aplogy
-			dispatcher.utter_message(buttons=[
-				{'title': "Was sind Sepsiserreger?", 'payload': '/was_sepsiserreger'}, # give options / no options
-		        {'title': "Was ist eine Sepsis", 'payload': '/was_sepsis'}])
+			dispatcher.utter_message(text="Das habe ich nicht verstanden.") # apology / no aplogy
+			# dispatcher.utter_message(buttons=[
+			# 	{'title': "Was sind Sepsiserreger?", 'payload': '/was_sepsiserreger'}, # give options / no options
+		    #     {'title': "Was ist eine Sepsis", 'payload': '/was_sepsis'}])
 		else:
 			dispatcher.utter_message("Die häufigsten Sepsiserreger sind Bakterien. Am häufigsten gehen bakterielle Infektionen der Atemwege, des Verdauungstrakts und des Urogenitaltrakts mit einer Sepsis einher, Risikofaktoren sind Alter, Abwehrschwäche, Vorerkrankung und Eingriffe in den Körper, der Erregern als Eintrittspforte dient. Aber grundsätzlich kann jede bakterielle Infektion in eine Sepsis münden.")
 		return []
@@ -64,11 +64,11 @@ class ActionErrorRisikofaktoren(Action):
 
 		slot = tracker.get_slot("num_intent_risikofaktoren")
 		if slot < 2:
-			dispatcher.utter_message(text="Meinst du:") # apology / no aplogy
-			dispatcher.utter_message(buttons=[
-				{'title': "Welche Spätfolgen gibt es?", 'payload': '/welche_spaetfolgen'}, # give options / no options
-		        {'title': "Was sind die Risikofaktoren?", 'payload': '/welche_risikofaktoren'}])
-		else:
+			dispatcher.utter_message(text="Das habe ich nicht verstanden.") # apology / no aplogy
+		# 	dispatcher.utter_message(buttons=[
+		# 		{'title': "Welche Spätfolgen gibt es?", 'payload': '/welche_spaetfolgen'}, # give options / no options
+		#         {'title': "Was sind die Risikofaktoren?", 'payload': '/welche_risikofaktoren'}])
+		# else:
 			dispatcher.utter_message(text="Risikofaktoren sind Alter, Abwehrschwäche, Vorerkrankung und Eingriffe in den Körper, der Erregern als Eintrittspforte dient.")
 		return []
 
@@ -82,43 +82,43 @@ class ActionErrorSpaetfolgen(Action):
 
 		slot = tracker.get_slot("num_intent_spaetfolgen")
 		if slot < 2:
-			dispatcher.utter_message(text="Meinst du:") # apology / no aplogy
-			dispatcher.utter_message(buttons=[
-				{'title': "Welche Spätfolgen gibt es?", 'payload': '/welche_spaetfolgen'}, # give options / no options
-		        {'title': "Was sind die Risikofaktoren?", 'payload': '/welche_risikofaktoren'}])
+			dispatcher.utter_message(text="Das habe ich nicht verstanden.") # apology / no aplogy
+			# dispatcher.utter_message(buttons=[
+			# 	{'title': "Welche Spätfolgen gibt es?", 'payload': '/welche_spaetfolgen'}, # give options / no options
+		    #     {'title': "Was sind die Risikofaktoren?", 'payload': '/welche_risikofaktoren'}])
 		else:
 			dispatcher.utter_message(text="Wenn der Patient die Sepsis überlebt, hat er häufig unter Spätfolgen wie Gedächtnisstörungen , eingeschränktem Lernvermögen, Depression, Angst- und Schlafstörungen, Leistungsminderung, Nervenschmerzen (Polyneuropathie) und Schmerzen zu leiden.")
 		return []
 	
-class ActionDefaultAskAffirmation(Action):
-	def name(self):
-		return 'action_default_ask_affirmation'
+# class ActionDefaultAskAffirmation(Action):
+# 	def name(self):
+# 		return 'action_default_ask_affirmation'
 	
-	def run(self, dispatcher, tracker, domain):
+# 	def run(self, dispatcher, tracker, domain):
 	
-        # select the top three intents from the tracker        
-        # ignore the first one -- nlu fallback
-		predicted_intents = tracker.latest_message["intent_ranking"][1:3]
-	    # A prompt asking the user to select an option
-		text = "Meinst du:"
-		# a mapping between intents and user friendly wordings
-		intent_mappings = {
-            "was_sepsis": "Was ist eine Sepsis?",
-            "was_sepsiserreger": "Welche Sepsiserreger gibt es?",
-            "welche_risikofaktoren": "Welche Risikofaktoren gibt es?",
-            "welche_symptome": "Was sind die Symptome?",
-	        "welche_spaetfolgen": "Was sind die Spätfolgen?",
-            "greet": "Ich möchte dich begrüßen.",
-            "goodbye": "Ich möchte mich verabschieden.",
-            "thank": "Ich möchte mich bedanken."
-        }# show the top three intents as buttons to the user
-		buttons = [
-            {
-                "title": intent_mappings[intent['name']],
-                "payload": "/{}".format(intent['name'])
-            }
-            for intent in predicted_intents
-        ]# add a "none of these button", if the user doesn't
-        # agree when any suggestion
-		dispatcher.utter_message(text=text, buttons=buttons)
-		return []
+#         # select the top three intents from the tracker        
+#         # ignore the first one -- nlu fallback
+# 		predicted_intents = tracker.latest_message["intent_ranking"][1:3]
+# 	    # A prompt asking the user to select an option
+# 		text = "Meinst du:"
+# 		# a mapping between intents and user friendly wordings
+# 		intent_mappings = {
+#             "was_sepsis": "Was ist eine Sepsis?",
+#             "was_sepsiserreger": "Welche Sepsiserreger gibt es?",
+#             "welche_risikofaktoren": "Welche Risikofaktoren gibt es?",
+#             "welche_symptome": "Was sind die Symptome?",
+# 	        "welche_spaetfolgen": "Was sind die Spätfolgen?",
+#             "greet": "Ich möchte dich begrüßen.",
+#             "goodbye": "Ich möchte mich verabschieden.",
+#             "thank": "Ich möchte mich bedanken."
+#         }# show the top three intents as buttons to the user
+# 		buttons = [
+#             {
+#                 "title": intent_mappings[intent['name']],
+#                 "payload": "/{}".format(intent['name'])
+#             }
+#             for intent in predicted_intents
+#         ]# add a "none of these button", if the user doesn't
+#         # agree when any suggestion
+# 		dispatcher.utter_message(text=text, buttons=buttons)
+# 		return []
