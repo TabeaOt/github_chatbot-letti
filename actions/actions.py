@@ -46,7 +46,7 @@ class ActionErrorSepsiserreger(Action):
 
 		slot = tracker.get_slot("num_intent_sepsiserreger")
 		if slot < 2:
-			dispatcher.utter_message(text="Das habe ich nicht verstanden.") # apology / no aplogy
+			dispatcher.utter_message(text="ENTSCHULDIGUNG + Das habe ich nicht verstanden.") # apology / no aplogy
 			# dispatcher.utter_message(buttons=[
 			# 	{'title': "Was sind Sepsiserreger?", 'payload': '/was_sepsiserreger'}, # give options / no options
 		    #     {'title': "Was ist eine Sepsis", 'payload': '/was_sepsis'}])
@@ -64,7 +64,7 @@ class ActionErrorRisikofaktoren(Action):
 
 		slot = tracker.get_slot("num_intent_risikofaktoren")
 		if slot < 2:
-			dispatcher.utter_message(text="Das habe ich nicht verstanden.") # apology / no aplogy
+			dispatcher.utter_message(text="ENTSCHULDIGUNG + Das habe ich nicht verstanden.") # apology / no aplogy
 		# 	dispatcher.utter_message(buttons=[
 		# 		{'title': "Welche Spätfolgen gibt es?", 'payload': '/welche_spaetfolgen'}, # give options / no options
 		#         {'title': "Was sind die Risikofaktoren?", 'payload': '/welche_risikofaktoren'}])
@@ -82,7 +82,7 @@ class ActionErrorSpaetfolgen(Action):
 
 		slot = tracker.get_slot("num_intent_spaetfolgen")
 		if slot < 2:
-			dispatcher.utter_message(text="Das habe ich nicht verstanden.") # apology / no aplogy
+			dispatcher.utter_message(text="ENTSCHULDIGUNG + Das habe ich nicht verstanden.") # apology / no aplogy
 			# dispatcher.utter_message(buttons=[
 			# 	{'title': "Welche Spätfolgen gibt es?", 'payload': '/welche_spaetfolgen'}, # give options / no options
 		    #     {'title': "Was sind die Risikofaktoren?", 'payload': '/welche_risikofaktoren'}])

@@ -61,8 +61,8 @@ responses:
   - text: Bitte sehr.
   - text: Es ist immer schön, hilfreich zu sein.
 
-  utter_fallback:
-  - text: Das habe ich nicht verstanden. Kannst du das bitte wiederholen?
+  utter_fallback_apology:
+  - text: ENTSCHULDIGUNG + Das habe ich nicht verstanden. Kannst du das bitte wiederholen?
 
 
 
