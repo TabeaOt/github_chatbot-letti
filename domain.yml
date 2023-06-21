@@ -15,6 +15,7 @@ actions:
   - action_error_sepsiserreger
   - action_error_risikofaktoren
   - action_error_spaetfolgen
+  - action_default_ask_affirmation
 
 slots:
   num_intent_sepsiserreger:
@@ -60,8 +61,8 @@ responses:
   - text: Bitte sehr.
   - text: Es ist immer schön, hilfreich zu sein.
 
-  utter_fallback_apology:
-  - text: Entschuldigung, das habe ich nicht verstanden. Kannst du das bitte wiederholen? 
+  # utter_fallback_apology:
+  # - text: Entschuldigung, das habe ich nicht verstanden. Kannst du das bitte wiederholen?
 
 
 
