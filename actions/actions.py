@@ -46,12 +46,12 @@ class ActionErrorSepsiserreger(Action):
 
 		slot = tracker.get_slot("num_intent_sepsiserreger")
 		if slot < 2:
-			dispatcher.utter_message(text="ENTSCHULDIGUNG + Das habe ich nicht verstanden.") # apology / no aplogy
+			dispatcher.utter_message(text="Entschuldigung, das habe ich nicht verstanden. Kannst du deine Frage bitte nochmal anders formulieren?") # apology / no aplogy
 			# dispatcher.utter_message(buttons=[
 			# 	{'title': "Was sind Sepsiserreger?", 'payload': '/was_sepsiserreger'}, # give options / no options
 		    #     {'title': "Was ist eine Sepsis", 'payload': '/was_sepsis'}])
 		else:
-			dispatcher.utter_message("Die häufigsten Sepsiserreger sind Bakterien. Am häufigsten gehen bakterielle Infektionen der Atemwege, des Verdauungstrakts und des Urogenitaltrakts mit einer Sepsis einher, Risikofaktoren sind Alter, Abwehrschwäche, Vorerkrankung und Eingriffe in den Körper, der Erregern als Eintrittspforte dient. Aber grundsätzlich kann jede bakterielle Infektion in eine Sepsis münden.")
+			dispatcher.utter_message("Die häufigsten Sepsiserreger sind Bakterien. Am häufigsten gehen bakterielle Infektionen der Atemwege, des Verdauungstrakts und des Urogenitaltrakts mit einer Sepsis einher. Risikofaktoren sind Alter, Abwehrschwäche, Vorerkrankung und Eingriffe in den Körper, der Erregern als Eintrittspforte dient. Aber grundsätzlich kann jede bakterielle Infektion in eine Sepsis münden.")
 		return []
 	
 class ActionErrorRisikofaktoren(Action):
@@ -64,7 +64,7 @@ class ActionErrorRisikofaktoren(Action):
 
 		slot = tracker.get_slot("num_intent_risikofaktoren")
 		if slot < 2:
-			dispatcher.utter_message(text="ENTSCHULDIGUNG + Das habe ich nicht verstanden.") # apology / no aplogy
+			dispatcher.utter_message(text="Entschuldigung, das habe ich nicht verstanden. Kannst du deine Frage bitte nochmal anders formulieren?") # apology / no aplogy
 		# 	dispatcher.utter_message(buttons=[
 		# 		{'title': "Welche Spätfolgen gibt es?", 'payload': '/welche_spaetfolgen'}, # give options / no options
 		#         {'title': "Was sind die Risikofaktoren?", 'payload': '/welche_risikofaktoren'}])
@@ -82,12 +82,12 @@ class ActionErrorSpaetfolgen(Action):
 
 		slot = tracker.get_slot("num_intent_spaetfolgen")
 		if slot < 2:
-			dispatcher.utter_message(text="ENTSCHULDIGUNG + Das habe ich nicht verstanden.") # apology / no aplogy
+			dispatcher.utter_message(text="Entschuldigung, das habe ich nicht verstanden. Kannst du deine Frage bitte nochmal anders formulieren?") # apology / no aplogy
 			# dispatcher.utter_message(buttons=[
 			# 	{'title': "Welche Spätfolgen gibt es?", 'payload': '/welche_spaetfolgen'}, # give options / no options
 		    #     {'title': "Was sind die Risikofaktoren?", 'payload': '/welche_risikofaktoren'}])
 		else:
-			dispatcher.utter_message(text="Wenn der Patient die Sepsis überlebt, hat er häufig unter Spätfolgen wie Gedächtnisstörungen , eingeschränktem Lernvermögen, Depression, Angst- und Schlafstörungen, Leistungsminderung, Nervenschmerzen (Polyneuropathie) und Schmerzen zu leiden.")
+			dispatcher.utter_message(text="Wenn Patientinnen oder Patienten die Sepsis überleben, haben sie häufig unter Spätfolgen wie Gedächtnisstörungen, eingeschränktem Lernvermögen, Depression, Angst- und Schlafstörungen, Leistungsminderung, Nervenschmerzen (Polyneuropathie) und Schmerzen zu leiden.")
 		return []
 	
 # class ActionDefaultAskAffirmation(Action):
