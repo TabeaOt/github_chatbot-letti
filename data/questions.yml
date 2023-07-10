@@ -4,68 +4,173 @@ nlu:
   - intent: was_sepsis
     examples: |
       - Was ist eine Sepsis?
-      - Was ist unter Sepsis zu verstehen?
-      - Kannst du mir den medizinischen Begriff „Sepsis“ näher erläutern?
-      - Wie wird Sepsis definiert?
-      - Kannst du mir sagen, was eine Sepsis genau ist?
-      - Wie wird der Begriff Sepsis im medizinischen Kontext definiert?
-      - Kannst du mir die Definition von Sepsis sagen?
-      - Kannst du mir erklären, was eine Sepsis ist?
-      - Was bedeutet der Begriff „Sepsis“?
-      - Was beschreibt eine Sepsis?
+      - Was ist unter Blutvergiftung zu verstehen? 
+      - Was ist unter einer septischen Erkrankung zu verstehen? 
+      - Kannst du mir den medizinischen Begriff „Sepsis“ näher erläutern? 
+      - Kannst du mir den medizinischen Begriff „Blutvergiftung“ näher erläutern? 
+      - Kannst du mir den medizinischen Begriff „septische Erkrankung“ näher erläutern? 
+      - Wie wird Sepsis definiert 
+      - Wie wird Blutvergiftung definiert? 
+      - Wie wird septische Erkrankung definiert? 
+      - Kannst du mir sagen, was eine Sepsis genau ist? 
+      - Kannst du mir sagen, was eine Blutvergiftung genau ist?
+      - Kannst du mir sagen, was eine septische Erkrankung genau ist? 
+      - Wie wird der Begriff Sepsis im medizinischen Kontext definiert? 
+      - Wie wird der Begriff Blutvergiftung im medizinischen Kontext definiert? 
+      - Wie wird der Begriff septische Erkrankung im medizinischen Kontext definiert? 
+      - Kannst du mir die Definition von Sepsis sagen? 
+      - Kannst du mir die Definition von Blutvergiftung sagen? 
+      - Kannst du mir die Definition von septischer Erkrankung sagen? 
+      - Kannst du mir erklären, was eine Sepsis ist? 
+      - Kannst du mir erklären, was eine Blutvergiftung ist? 
+      - Kannst du mir erklären, was eine septische Erkrankung ist? 
+      - Was bedeutet der Begriff „Sepsis“? 
+      - Was bedeutet der Begriff „Blutvergiftung“? 
+      - Was bedeutet der Begriff „septische Erkrankung“? 
+      - Was beschreibt eine Sepsis? 
+      - Was beschreibt eine Blutvergiftung? 
+      - Was beschreibt eine septische Erkrankung? 
 
   - intent: was_sepsiserreger
     examples: |
-      - Was sind Sepsiserreger?
-      - Welche Sepsiserreger gibt es?
-      - Was versteht man unter dem Begriff „Sepsiserreger“?
-      - Was sind Beispiele für Sepsiserreger?
-      - Welche Mikroorganismen gelten als Sepsiserreger?
-      - Kannst du mir Beispiele für Sepsiserreger nennen?
-      - Kannst du mir kurz erklären, welche Sepsiserreger es gibt?
-      - Wie werden Sepsiserreger beschrieben?
-      - Wie werden Sepsiserreger definiert?
-      - Welche Erreger können eine Sepsis verursachen?
-      - Was sind Erreger für eine Sepsis?
+      - Was sind Sepsiserreger? 
+      - Was sind Erreger einer Blutvergiftung? 
+      - Was sind Erreger einer septischen Erkrankung? 
+      - Welche Sepsiserreger gibt es? 
+      - Welche Erreger einer Blutvergiftung gibt es? 
+      - Welche Erreger einer septischen Erkrankung gibt es? 
+      - Was versteht man unter dem Begriff „Sepsiserreger“? 
+      - Was versteht man unter Erreger einer Blutvergiftung? 
+      - Was versteht man unter Erreger einer septischen Erkrankung 
+      - Was sind Beispiele für Sepsiserreger? 
+      - Was sind Beispiele für Erreger einer Blutvergiftung? 
+      - Was sind Beispiele für Erreger einer septischen Erkrankung? 
+      - Welche Mikroorganismen gelten als Sepsiserreger? 
+      - Welche Mikroorganismen gelten als Erreger einer Blutvergiftung? 
+      - Welche Mikroorganismen gelten als Erreger einer septischen Erkrankung? 
+      - Kannst du mir Beispiele für Sepsiserreger nennen? 
+      - Kannst du mir Beispiele für Erreger einer Blutvergiftung nennen? 
+      - Kannst du mir Beispiele für Erreger einer septischen Erkrankung nennen? 
+      - Kannst du mir kurz erklären, welche Sepsiserreger es gibt? 
+      - Kannst du mir kurz erklären, welche Erreger für eine Blutvergiftung es gibt? 
+      - Kannst du mir kurz erklären, welche Erreger einer septischen Erkrankung es gibt?
+      - Wie werden Sepsiserreger beschrieben? 
+      - Wie werden Erreger für eine Blutvergiftung beschrieben? 
+      - Wie werden Erreger einer septischen Erkrankung beschrieben? 
+      - Wie werden Sepsiserreger definiert? 
+      - Wie werden Erreger für eine Blutvergiftung definiert? 
+      - Wie werden Erreger einer septischen Erkrankung definiert? 
+      - Welche Erreger können eine Sepsis verursachen? 
+      - Welche Erreger können eine Blutvergiftung verursachen? 
+      - Welche Erreger können eine septische Erkrankung verursachen? 
+      - Was sind Erreger für eine Sepsis? 
+      - Was sind Erreger für eine Blutvergiftung? 
+      - Was sind Erreger für eine septische Erkrankung? 
 
   - intent: welche_risikofaktoren
     examples: |
-      - Welche Risikofaktoren für Sepsis gibt es?
-      - Welche Faktoren erhöhen das Risiko, eine Sepsis zu entwickeln?
-      - Kannst du mir verschiedene Risikofaktoren der Sepsis aufzeigen
-      - Was sind Risikofaktoren für eine Sepsis?
-      - Welche Faktoren erhöhen die Wahrscheinlichkeit, an einer Sepsis zu erkranken?
-      - Welche Risikofaktoren machen eine Person anfälliger für eine Sepsis?
-      - Welche Faktoren machen eine Person anfälliger für eine Sepsis?
-      - Kannst du mir die Risikofaktoren nennen, die das Auftreten einer Sepsis begünstigen?
-      - Welche Faktoren spielen eine Rolle bei der Entstehung einer Sepsis?
-      - Welche Faktoren beeinflussen die Gefährdung an einer Sepsis zu erkranken?
-      - Was sind Risikofaktoren, die zu einer Sepsis führen können?
-      - Welche Faktoren tragen zu einem erhöhten Sepsis- Risiko bei?
+      - Welche Risikofaktoren für Sepsis gibt es? 
+      - Welche Risikofaktoren für Blutvergiftung gibt es? 
+      - Welche Risikofaktoren für eine septische Erkrankung gibt es? 
+      - Welche Faktoren erhöhen das Risiko, eine Sepsis zu entwickeln? 
+      - Welche Faktoren erhöhen das Risiko, eine Blutvergiftung zu entwickeln? 
+      - Welche Faktoren erhöhen das Risiko, eine septische Erkrankung zu entwickeln? 
+      - Kannst du mir verschiedene Risikofaktoren der Sepsis aufzeigen? 
+      - Kannst du mir verschiedene Risikofaktoren der Blutvergiftung aufzeigen? 
+      - Kannst du mir verschiedene Risikofaktoren einer septischen Erkrankung aufzeigen? 
+      - Was sind Risikofaktoren für eine Sepsis? 
+      - Was sind Risikofaktoren für eine Blutvergiftung? 
+      - Was sind Risikofaktoren für eine septische Erkrankung? 
+      - Welche Faktoren erhöhen die Wahrscheinlichkeit, an einer Sepsis zu erkranken? 
+      - Welche Faktoren erhöhen die Wahrscheinlichkeit, an einer Blutvergiftung zu erkranken? 
+      - Welche Faktoren erhöhen die Wahrscheinlichkeit, an einer septischen Erkrankung zu erkranken? 
+      - Welche Risikofaktoren machen eine Person anfälliger für eine Sepsis? 
+      - Welche Risikofaktoren machen eine Person anfälliger für eine Blutvergiftung? 
+      - Welche Risikofaktoren machen eine Person anfälliger für eine septische Erkrankung? 
+      - Welche Faktoren machen eine Person anfälliger für eine Sepsis? 
+      - Welche Faktoren machen eine Person anfälliger für eine Blutvergiftung? 
+      - Welche Faktoren machen eine Person anfälliger für eine septische Erkrankung? 
+      - Kannst du mir die Risikofaktoren nennen, die das Auftreten einer Sepsis begünstigen? 
+      - Kannst du mir die Risikofaktoren nennen, die das Auftreten einer Blutvergiftung begünstigen? 
+      - Kannst du mir die Risikofaktoren nennen, die das Auftreten einer septischen Erkrankung begünstigen? 
+      - Welche Faktoren spielen eine Rolle bei der Entstehung einer Sepsis? 
+      - Welche Faktoren spielen eine Rolle bei der Entstehung einer Blutvergiftung? 
+      - Welche Faktoren spielen eine Rolle bei der Entstehung einer septischen Erkrankung? 
+      - Welche Faktoren beeinflussen die Gefährdung an einer Sepsis zu erkranken? 
+      - Welche Faktoren beeinflussen die Gefährdung an einer Blutvergiftung zu erkranken? 
+      - Welche Faktoren beeinflussen die Gefährdung an einer septischen Erkrankung zu erkranken? 
+      - Was sind Risikofaktoren, die zu einer Sepsis führen können? 
+      - Was sind Risikofaktoren, die zu einer Blutvergiftung führen können? 
+      - Was sind Risikofaktoren, die zu einer septischen Erkrankung führen können? 
+      - Welche Faktoren tragen zu einem erhöhten Sepsis- Risiko bei? 
+      - Welche Faktoren tragen zu einem erhöhten Blutvergiftungs- Risiko bei? 
+      - Welche Faktoren tragen zu einem erhöhten septischen Erkrankungs- Risiko bei? 
 
   - intent: welche_symptome
     examples: |
-      - Welche Symptome treten bei einer Sepsis auf?
-      - Welche Anzeichen deuten auf das Vorliegen einer Sepsis hin?
-      - Kannst du mir die typischen Symptome einer Sepsis beschreiben?
-      - Was sind die häufigsten Symptome, die bei einer Sepsis auftreten können?
-      - Kannst du mir die charakteristischen Anzeichen einer Sepsis nennen?
-      - Welche körperlichen Symptome sind typisch für eine Sepsis?
-      - Was sind die klinischen Merkmale einer Sepsis?
-      - Könntest du mir die Symptome einer Sepsis sagen?
-      - Auf welche Symptome sollte man bei einer Sepsis achten?
-      - Welche Symptome deuten auf eine Sepsis hin?
+      - Welche Symptome treten bei einer Sepsis auf? 
+      - Welche Symptome treten bei einer Blutvergiftung auf? 
+      - Welche Symptome treten bei einer septischen Erkrankung auf? 
+      - Welche Anzeichen deuten auf das Vorliegen einer Sepsis hin? 
+      - Welche Anzeichen deuten auf das Vorliegen einer Blutvergiftung hin? 
+      - Welche Anzeichen deuten auf das Vorliegen einer septischen Erkrankung hin? 
+      - Kannst du mir die typischen Symptome einer Sepsis beschreiben? 
+      - Kannst du mir die typischen Symptome einer Blutvergiftung beschreiben? 
+      - Kannst du mir die typischen Symptome einer septischen Erkrankung beschreiben? 
+      - Was sind die häufigsten Symptome, die bei einer Sepsis auftreten können? 
+      - Was sind die häufigsten Symptome, die bei einer Blutvergiftung auftreten können? 
+      - Was sind die häufigsten Symptome, die bei einer septischen Erkrankung auftreten können? 
+      - Kannst du mir die charakteristischen Anzeichen einer Sepsis nennen? 
+      - Kannst du mir die charakteristischen Anzeichen einer Blutvergiftung nennen? 
+      - Kannst du mir die charakteristischen Anzeichen einer septischen Erkrankung nennen? 
+      - Welche körperlichen Symptome sind typisch für eine Sepsis? 
+      - Welche körperlichen Symptome sind typisch für eine Blutvergiftung? 
+      - Welche körperlichen Symptome sind typisch für eine septischen Erkrankung? 
+      - Was sind die klinischen Merkmale einer Sepsis? 
+      - Was sind die klinischen Merkmale einer Blutvergiftung? 
+      - Was sind die klinischen Merkmale einer septischen Erkrankung? 
+      - Könntest du mir die Symptome einer Sepsis sagen? 
+      - Könntest du mir die Symptome einer Blutvergiftung sagen? 
+      - Könntest du mir die Symptome einer septischen Erkrankung sagen? 
+      - Auf welche Symptome sollte man bei einer Sepsis achten? 
+      - Auf welche Symptome sollte man bei einer Blutvergiftung achten? 
+      - Auf welche Symptome sollte man bei einer septischen Erkrankung achten? 
+      - Welche Symptome deuten auf eine Sepsis hin? 
+      - Welche Symptome deuten auf eine Blutvergiftung hin? 
+      - Welche Symptome deuten auf eine septische Erkrankung hin?
 
   - intent: welche_spaetfolgen
     examples: |
-      - Können nach einer Sepsis Spätfolgen auftreten?
-      - Gibt es mögliche Langzeitfolgen nach einer überstandenen Sepsis?
-      - Können sich nach einer Sepsis langfristige gesundheitliche Auswirkungen zeigen?
-      - Welche Spätfolgen können nach einer Sepsis auftreten?
-      - Gibt es potenzielle Spätfolgen nach einer Sepsis?
-      - Kann es nach einer Sepsis zu Spätfolgen kommen?
-      - Gibt es Risiken für Spätfolgen nach einer überstandenen Sepsis?
-      - Können sich nach einer Sepsis Spätfolgen, wie körperliche oder geistige Beeinträchtigungen zeigen?
-      - Welche Spätfolgen können nach einer Sepsis auftreten?
-      - Besteht die Möglichkeit von Spätfolgen nach einer Sepsis?
-      - Welche Spätfolgen nach einer Sepsis bestehen bleiben?
+      - Können nach einer Sepsis Spätfolgen auftreten? 
+      - Können nach einer Blutvergiftung Spätfolgen auftreten? 
+      - Können nach einer septischen Erkrankung Spätfolgen auftreten? 
+      - Gibt es mögliche Langzeitfolgen nach einer überstandenen Sepsis? 
+      - Gibt es mögliche Langzeitfolgen nach einer überstandenen Blutvergiftung? 
+      - Gibt es mögliche Langzeitfolgen nach einer überstandenen einer septischen Erkrankung? 
+      - Können sich nach einer Sepsis langfristige gesundheitliche Auswirkungen zeigen? 
+      - Können sich nach einer Blutvergiftung langfristige gesundheitliche Auswirkungen zeigen? 
+      - Können sich nach einer septischen Erkrankung langfristige gesundheitliche Auswirkungen zeigen? 
+      - Welche Spätfolgen können nach einer Sepsis auftreten? 
+      - Welche Spätfolgen können nach einer Blutvergiftung auftreten? 
+      - Welche Spätfolgen können nach einer septischen Erkrankung auftreten? 
+      - Gibt es potenzielle Spätfolgen nach einer Sepsis? 
+      - Gibt es potenzielle Spätfolgen nach einer Blutvergiftung? 
+      - Gibt es potenzielle Spätfolgen nach einer septischen Erkrankung? 
+      - Kann es nach einer Sepsis zu Spätfolgen kommen? 
+      - Kann es nach einer Blutvergiftung zu Spätfolgen kommen? 
+      - Kann es nach einer septischen Erkrankung zu Spätfolgen kommen? 
+      - Gibt es Risiken für Spätfolgen nach einer überstandenen Sepsis? 
+      - Gibt es Risiken für Spätfolgen nach einer überstandenen Blutvergiftung? 
+      - Gibt es Risiken für Spätfolgen nach einer überstandenen einer septischen Erkrankung? 
+      - Können sich nach einer Sepsis Spätfolgen, wie körperliche oder geistige Beeinträchtigungen zeigen? 
+      - Können sich nach einer Blutvergiftung Spätfolgen, wie körperliche oder geistige Beeinträchtigungen zeigen? 
+      - Können sich nach einer septischen Erkrankung Spätfolgen, wie körperliche oder geistige Beeinträchtigungen zeigen? 
+      - Welche Spätfolgen können nach einer Sepsis auftreten? 
+      - Welche Spätfolgen können nach einer Blutvergiftung auftreten? 
+      - Welche Spätfolgen können nach einer septischen Erkrankung auftreten? 
+      - Besteht die Möglichkeit von Spätfolgen nach einer Sepsis? 
+      - Besteht die Möglichkeit von Spätfolgen nach einer Blutvergiftung? 
+      - Besteht die Möglichkeit von Spätfolgen nach einer septischen Erkrankung? 
+      - Welche Spätfolgen können nach einer Sepsis bestehen bleiben? 
+      - Welche Spätfolgen können nach einer Blutvergiftung bestehen bleiben? 
+      - Welche Spätfolgen können nach einer septischen Erkrankung bestehen bleiben? 
