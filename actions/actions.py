@@ -46,12 +46,12 @@ class ActionErrorSepsiserreger(Action):
 
 		slot = tracker.get_slot("num_intent_sepsiserreger")
 		if slot < 2:
-			dispatcher.utter_message(text="Meinst du:") # apology / no aplogy
+			dispatcher.utter_message(text="Das habe ich nicht verstanden. Kannst du auswählen, was du meinst?") # apology / no aplogy
 			dispatcher.utter_message(buttons=[
-				{'title': "Was sind Sepsiserreger?", 'payload': '/was_sepsiserreger'}, # give options / no options
+				{'title': "Welche Sepsiserreger gibt es?", 'payload': '/was_sepsiserreger'}, # give options / no options
 		        {'title': "Was ist eine Sepsis", 'payload': '/was_sepsis'}])
 		else:
-			dispatcher.utter_message("Die häufigsten Sepsiserreger sind Bakterien. Am häufigsten gehen bakterielle Infektionen der Atemwege, des Verdauungstrakts und des Urogenitaltrakts mit einer Sepsis einher, Risikofaktoren sind Alter, Abwehrschwäche, Vorerkrankung und Eingriffe in den Körper, der Erregern als Eintrittspforte dient. Aber grundsätzlich kann jede bakterielle Infektion in eine Sepsis münden.")
+			dispatcher.utter_message("Die häufigsten Sepsiserreger sind Bakterien. Am häufigsten gehen bakterielle Infektionen der Atemwege, des Verdauungstrakts und des Urogenitaltrakts mit einer Sepsis einher. Risikofaktoren sind Alter, Abwehrschwäche, Vorerkrankung und Eingriffe in den Körper, der Erregern als Eintrittspforte dient. Aber grundsätzlich kann jede bakterielle Infektion in eine Sepsis münden.")
 		return []
 	
 class ActionErrorRisikofaktoren(Action):
@@ -64,10 +64,10 @@ class ActionErrorRisikofaktoren(Action):
 
 		slot = tracker.get_slot("num_intent_risikofaktoren")
 		if slot < 2:
-			dispatcher.utter_message(text="Meinst du:") # apology / no aplogy
+			dispatcher.utter_message(text="Das habe ich nicht verstanden. Kannst du auswählen, was du meinst?") # apology / no aplogy
 			dispatcher.utter_message(buttons=[
-				{'title': "Welche Spätfolgen gibt es?", 'payload': '/welche_spaetfolgen'}, # give options / no options
-		        {'title': "Was sind die Risikofaktoren?", 'payload': '/welche_risikofaktoren'}])
+				{'title': "Können nach einer Sepsis Spätfolgen auftreten?", 'payload': '/welche_spaetfolgen'}, # give options / no options
+		        {'title': "Welche Risikofaktoren für Sepsis gibt es?", 'payload': '/welche_risikofaktoren'}])
 		else:
 			dispatcher.utter_message(text="Risikofaktoren sind Alter, Abwehrschwäche, Vorerkrankung und Eingriffe in den Körper, der Erregern als Eintrittspforte dient.")
 		return []
@@ -82,12 +82,12 @@ class ActionErrorSpaetfolgen(Action):
 
 		slot = tracker.get_slot("num_intent_spaetfolgen")
 		if slot < 2:
-			dispatcher.utter_message(text="Meinst du:") # apology / no aplogy
+			dispatcher.utter_message(text="Das habe ich nicht verstanden. Kannst du auswählen, was du meinst?") # apology / no aplogy
 			dispatcher.utter_message(buttons=[
-				{'title': "Welche Spätfolgen gibt es?", 'payload': '/welche_spaetfolgen'}, # give options / no options
-		        {'title': "Was sind die Risikofaktoren?", 'payload': '/welche_risikofaktoren'}])
+				{'title': "Können nach einer Sepsis Spätfolgen auftreten?", 'payload': '/welche_spaetfolgen'}, # give options / no options
+		        {'title': "Welche Risikofaktoren für Sepsis gibt es?", 'payload': '/welche_risikofaktoren'}])
 		else:
-			dispatcher.utter_message(text="Wenn der Patient die Sepsis überlebt, hat er häufig unter Spätfolgen wie Gedächtnisstörungen , eingeschränktem Lernvermögen, Depression, Angst- und Schlafstörungen, Leistungsminderung, Nervenschmerzen (Polyneuropathie) und Schmerzen zu leiden.")
+			dispatcher.utter_message(text="Wenn Patientinnen oder Patienten die Sepsis überleben, haben sie häufig unter Spätfolgen wie Gedächtnisstörungen, eingeschränktem Lernvermögen, Depression, Angst- und Schlafstörungen, Leistungsminderung, Nervenschmerzen (Polyneuropathie) und Schmerzen zu leiden.")
 		return []
 	
 class ActionDefaultAskAffirmation(Action):
@@ -100,14 +100,14 @@ class ActionDefaultAskAffirmation(Action):
         # ignore the first one -- nlu fallback
 		predicted_intents = tracker.latest_message["intent_ranking"][1:3]
 	    # A prompt asking the user to select an option
-		text = "Meinst du:"
+		text = "Das habe ich nicht verstanden. Kannst du auswählen, was du meinst?"
 		# a mapping between intents and user friendly wordings
 		intent_mappings = {
             "was_sepsis": "Was ist eine Sepsis?",
             "was_sepsiserreger": "Welche Sepsiserreger gibt es?",
-            "welche_risikofaktoren": "Welche Risikofaktoren gibt es?",
-            "welche_symptome": "Was sind die Symptome?",
-	        "welche_spaetfolgen": "Was sind die Spätfolgen?",
+            "welche_risikofaktoren": "Welche Risikofaktoren für Sepsis gibt es?",
+            "welche_symptome": "Welche Symptome treten bei einer Sepsis auf?",
+	        "welche_spaetfolgen": "Können nach einer Sepsis Spätfolgen auftreten?",
             "greet": "Ich möchte dich begrüßen.",
             "goodbye": "Ich möchte mich verabschieden.",
             "thank": "Ich möchte mich bedanken."
