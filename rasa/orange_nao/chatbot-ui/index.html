@@ -102,9 +102,6 @@
     <div id="header">
       <h1>Chatbot "Orange" Studie Fragebogen</h1>
     </div>
-    <div id="survey">
-     <p>Link zum <a href="https://forms.office.com/e/ZyxhnzdTzQ" target="_blank">Fragebogen</a></p>
-    </div>
     <div>
       <p>Bitte stelle dem Chatbot folgende Fragen:</p>
       <ul>
@@ -126,6 +123,9 @@
        <input type="text" id="chatbot-typing-area" name="chat-message" placeholder="Stell mir eine Frage" onkeypress="enterKeyPressed(event)">
        <button type="button" id="chatbot-enter-btn">Senden</button>
       </div>
+      <div id="survey">
+        <p>Wenn du alle Fragen gestellt hast, klicke <a href="https://forms.office.com/e/ZyxhnzdTzQ" target="_blank">hier</a> um zum Fragebogen zu gelangen.</p>
+      </div>
     </div>
     <script>
       document.getElementById('chatbot-enter-btn').addEventListener("click", handleInput);
@@ -139,13 +139,13 @@
         var question = input.value;
         input.value = '';
         addUtterance(question, 'user-question');
-        fetch('http://localhost:10020/webhooks/rest/webhook', {
+        fetch('https://orange.chatbot-letti.xikolo.de/webhooks/rest/webhook', {
           method: 'POST',
           headers: {
               'Accept': 'application/json',
               'Content-Type': 'application/json'
           },
-          body: JSON.stringify({ "message": question, "sender": "random1" })
+          body: JSON.stringify({ "message": question, "sender": "orange" })
         })
         .then(function (response) {
           if(response.status = 200) return response.json();
