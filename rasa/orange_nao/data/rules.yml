@@ -1,0 +1,18 @@
+version: "3.1"
+
+rules:
+
+- rule: goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: thank
+  steps:
+  - intent: thank
+  - action: utter_you_are_welcome
+
+- rule: NLU fallback
+  steps:
+  - intent: nlu_fallback
+  - action: action_default_ask_affirmation

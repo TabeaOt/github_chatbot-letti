@@ -1,0 +1,20 @@
+version: '3'
+services:
+    rasa:
+      container_name: "chatbot_blue"
+      user: root
+      build: 
+        context: ./rasa
+      volumes:
+        - "./rasa:/app"
+      ports: 
+        - "10030:5005"
+    action_server:
+      container_name: "action_server_blue"
+      build: 
+        context: ./rasa/actions
+      volumes:
+        - ./rasa:/app/actions
+        - ./rasa:/app/data
+      ports:
+        - 10031:5055

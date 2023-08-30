@@ -1,0 +1,67 @@
+version: "3.1"
+
+intents:
+  - was_sepsis
+  - was_sepsiserreger
+  - welche_risikofaktoren
+  - welche_symptome
+  - welche_spaetfolgen
+  - greet
+  - goodbye
+  - thank
+
+actions:
+  - action_count_intent
+  - action_error_sepsiserreger
+  - action_error_risikofaktoren
+  - action_error_spaetfolgen
+  - action_default_ask_affirmation
+
+slots:
+  num_intent_sepsiserreger:
+    type: float
+    initial_value: 0
+    mappings:
+    - type: custom
+  num_intent_risikofaktoren:
+    type: float
+    initial_value: 0
+    mappings:
+    - type: custom
+  num_intent_spaetfolgen:
+    type: float
+    initial_value: 0
+    mappings:
+    - type: custom
+
+responses:
+  utter_was_sepsis:
+  - text: "Eine Sepsis, umgangssprachlich auch Blutvergiftung, ist eine Infektion, die mit einer systemischen entzündlichen Abwehrreaktion einhergeht."
+  # utter_was_sepsiserreger:
+  # - text: "Die häufigsten Sepsiserreger sind Bakterien. Am häufigsten gehen bakterielle Infektionen der Atemwege, des Verdauungstrakts und des Urogenitaltrakts mit einer Sepsis einher, Risikofaktoren sind Alter, Abwehrschwäche, Vorerkrankung und Eingriffe in den Körper, der Erregern als Eintrittspforte dient. Aber grundsätzlich kann jede bakterielle Infektion in eine Sepsis münden."
+
+  # utter_welche_risikofaktoren:
+  # - text: "Risikofaktoren sind Alter, Abwehrschwäche, Vorerkrankung und Eingriffe in den Körper, der Erregern als Eintrittspforte dient."
+
+  utter_welche_symptome:
+  - text: "Das häufigste Symptom bei Sepsis ist Fieber, das typischerweise plötzlich auftritt und häufig mit Schüttelfrost einhergeht. Andere Symptome sind zum Beispiel: niedriger Blutdruck, ausgeprägtes Krankheitsgefühl oder beschleunigter Atem. Allerdings können die Symptome in jedem individuellen Fall variieren."
+  # utter_welche_spaetfolgen:
+  # - text: "Wenn der Patient die Sepsis überlebt, hat er häufig unter Spätfolgen wie Gedächtnisstörungen , eingeschränktem Lernvermögen, Depression, Angst- und Schlafstörungen, Leistungsminderung, Nervenschmerzen (Polyneuropathie) und Schmerzen zu leiden."
+
+  utter_greet:
+  - text: "Hallo, ich bin ein Bot, der dazu entwickelt wurde, medizinische Fragen zu beantworten. Was möchtest du wissen?"
+
+  utter_goodbye:
+  - text: Hab einen schönen Tag!
+
+  utter_you_are_welcome:
+  - text: Bitte sehr.
+
+  # utter_fallback_apology:
+  # - text: Entschuldigung, das habe ich nicht verstanden. Kannst du das bitte wiederholen?
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
