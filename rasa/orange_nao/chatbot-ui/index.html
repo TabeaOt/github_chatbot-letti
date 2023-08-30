@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Chatbot Studie Umfrage</title>
+    <meta charset="UTF-8" />
+    <style>
+     body {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      /* font-weight: 700; */
+     }
+     .chatbot-conversation {
+      margin-top: 16px;
+      border: 1px solid gray;
+      padding: 8px 16px;
+      width: 60%;
+      height: 40vh;
+      overflow-y: auto;
+      background-color: white;
+     }
+
+     .chatbot-message-box {
+      position: relative;
+      text-align: left;
+      width: 59%;
+      border-radius: 4px;
+      padding: 8px;
+      margin-bottom: 5px;
+     }
+
+     .user-question {
+      margin-left: 40%;
+      background-color: #3268bf;
+      color: white;
+      border-radius: 4px;
+      padding: 5px;
+      height: auto;
+      &::after {
+        z-index: 1;
+        display: inline-block;
+        position: absolute;
+        right: -10px;
+        top: 0px;
+        width: 0;
+        height: 0;
+        border-top: 16px solid #3268bf;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        content: " ";
+      }
+     }
+
+     .chatbot-answer {
+      background-color: #ededed;
+      color: black;
+      border-radius: 4px;
+      padding: 5px;
+      height: auto;
+
+      &::before {
+       z-index: 1;
+       display: inline-block;
+       position: absolute;
+       left: -10px;
+       top: 0px;
+       width: 0;
+       height: 0;
+       border-top: 16px solid #ededed;
+       border-left: 10px solid transparent;
+       border-right: 10px solid transparent;
+       content: " ";
+     }
+     }
+
+     #chatbot-typing-area {
+      width: 100%;
+      margin-top: 10px;
+      height: 35px;
+     }
+
+     #chatbot-control-window {
+       padding: 0;
+       margin-bottom: 20px;
+       width: 62%;
+     }
+
+     #chatbot-enter-btn {
+      border-radius: 0;
+      height: 40px;
+      background-color: #18a568;
+      color: white;
+      margin-top: 5px;
+      width: 10%;
+      border-radius: 5px;
+      border-color: #18a568;
+     }
+
+     </style>
+  </head>
+  <body>
+<body>
+  <div>
+    <div id="header">
+      <h1>Chatbot "Orange" Studie Fragebogen</h1>
+    </div>
+    <div id="survey">
+     <p>Link zum <a href="https://forms.office.com/e/ZyxhnzdTzQ" target="_blank">Fragebogen</a></p>
+    </div>
+    <div>
+      <p>Bitte stelle dem Chatbot folgende Fragen:</p>
+      <ul>
+        <li>Was ist eine Sepsis?</li>
+        <li>Welche Sepsiserreger gibt es?</li>
+        <li>Welche Risikofaktoren für Sepsis gibt es?</li>
+        <li>Welche Symptome treten bei einer Sepsis auf?</li>
+        <li>Können nach einer Sepsis Spätfolgen auftreten?</li>
+      </ul>
+    </div>
+    <div class="chatbot-conversation" id="conversation-parent">
+     <div class="chatbot-message-box chatbot-answer">
+      <p>Starte direkt, indem du dem Chatbot deine Fragen stellst!</p>
+     </div>
+      <div id="utterance-placeholder">
+      </div>
+     </div>
+      <div id="chatbot-control-window">
+       <input type="text" id="chatbot-typing-area" name="chat-message" placeholder="Stell mir eine Frage" onkeypress="enterKeyPressed(event)">
+       <button type="button" id="chatbot-enter-btn">Senden</button>
+      </div>
+    </div>
+    <script>
+      document.getElementById('chatbot-enter-btn').addEventListener("click", handleInput);
+      function enterKeyPressed(event) {
+        if (event.keyCode == 13) {
+          handleInput()
+        }
+      }
+      function handleInput() {
+        input = document.getElementById('chatbot-typing-area');
+        var question = input.value;
+        input.value = '';
+        addUtterance(question, 'user-question');
+        fetch('http://localhost:10020/webhooks/rest/webhook', {
+          method: 'POST',
+          headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ "message": question, "sender": "random1" })
+        })
+        .then(function (response) {
+          if(response.status = 200) return response.json();
+        })
+        .then(function (response) {
+          var length = response.length;
+          if (length === 0) return;
+          var i = 0;
+          while(i < length) {
+            addUtterance(response[i]['text'], 'chatbot-answer')
+            i++;
+          }
+        })
+      }
+
+      function addUtterance(utterance, type) {
+        var message = document.createElement('div');
+        message.classList.add('chatbot-message-box', type);
+        message.innerHTML = utterance.trim();
+        var placeholder = document.getElementById('utterance-placeholder')
+        var parentDiv = document.getElementById('conversation-parent')
+        parentDiv.insertBefore(message, placeholder)
+      }
+    </script>
+</body>
+</html>

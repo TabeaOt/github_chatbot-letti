@@ -139,7 +139,7 @@
         var question = input.value;
         input.value = '';
         addUtterance(question, 'user-question');
-        fetch('http://localhost:5005/webhooks/rest/webhook', {
+        fetch('http://localhost:10000/webhooks/rest/webhook', {
           method: 'POST',
           headers: {
               'Accept': 'application/json',

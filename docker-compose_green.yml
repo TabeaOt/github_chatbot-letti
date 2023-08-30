@@ -4,17 +4,25 @@ services:
       container_name: "chatbot_green"
       user: root
       build: 
-        context: ./rasa
+        context: ./rasa/green_nano
       volumes:
-        - "./rasa:/app"
+        - "./rasa/green_nano:/app"
       ports: 
         - "10000:5005"
     action_server:
       container_name: "action_server_green"
       build: 
-        context: ./rasa/actions
+        context: ./rasa/green_nano/actions
       volumes:
-        - ./rasa:/app/actions
-        - ./rasa:/app/data
+        - ./rasa/green_nano/actions:/app/actions
+        - ./rasa/green_nano/data:/app/data
       ports:
         - 10001:5055
+    chatbot-ui:
+      container_name: "chat-ui-green"
+      build:
+        context: ./rasa/green_nano/chatbot-ui
+      volumes:
+        - ./rasa/green_nano/chatbot-ui:/app/chatbot-ui
+      ports:
+        - 10002:8080

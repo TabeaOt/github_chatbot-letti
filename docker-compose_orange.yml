@@ -4,17 +4,25 @@ services:
       container_name: "chatbot_orange"
       user: root
       build: 
-        context: ./rasa
+        context: ./rasa/orange_nao
       volumes:
-        - "./rasa:/app"
+        - "./rasa/orange_nao:/app"
       ports: 
         - "10020:5005"
     action_server:
       container_name: "action_server_orange"
       build: 
-        context: ./rasa/actions
+        context: ./rasa/orange_nao/actions
       volumes:
-        - ./rasa:/app/actions
-        - ./rasa:/app/data
+        - ./rasa/orange_nao/actions:/app/actions
+        - ./rasa/orange_nao/data:/app/data
       ports:
         - 10021:5055
+    chatbot-ui:
+      container_name: "chat-ui-orange"
+      build:
+        context: ./rasa/orange_nao/chatbot-ui
+      volumes:
+        - ./rasa/orange_nao/chatbot-ui:/app/chatbot-ui
+      ports:
+        - 10022:8080

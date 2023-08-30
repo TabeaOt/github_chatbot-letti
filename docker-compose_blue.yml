@@ -4,17 +4,25 @@ services:
       container_name: "chatbot_blue"
       user: root
       build: 
-        context: ./rasa
+        context: ./rasa/blue_ao
       volumes:
-        - "./rasa:/app"
+        - "./rasa/blue_ao:/app"
       ports: 
         - "10030:5005"
     action_server:
       container_name: "action_server_blue"
       build: 
-        context: ./rasa/actions
+        context: ./rasa/blue_ao/actions
       volumes:
-        - ./rasa:/app/actions
-        - ./rasa:/app/data
+        - ./rasa/blue_ao/actions:/app/actions
+        - ./rasa/blue_ao/data:/app/data
       ports:
         - 10031:5055
+    chatbot-ui:
+      container_name: "chat-ui-blue"
+      build:
+        context: ./rasa/blue_ao/chatbot-ui
+      volumes:
+        - ./rasa/blue_ao/chatbot-ui:/app/chatbot-ui
+      ports:
+        - 10032:8080

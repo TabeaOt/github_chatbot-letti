@@ -4,17 +4,25 @@ services:
       container_name: "chatbot_purple"
       user: root
       build: 
-        context: ./rasa
+        context: ./rasa/purple_ano
       volumes:
-        - "./rasa:/app"
+        - "./rasa/purple_ano:/app"
       ports: 
         - "10010:5005"
     action_server:
       container_name: "action_server_purple"
       build: 
-        context: ./rasa/actions
+        context: ./rasa/purple_ano/actions
       volumes:
-        - ./rasa:/app/actions
-        - ./rasa:/app/data
+        - ./rasa/purple_ano/actions:/app/actions
+        - ./rasa/purple_ano/data:/app/data
       ports:
         - 10011:5055
+    chatbot-ui:
+      container_name: "chat-ui-purple"
+      build:
+        context: ./rasa/purple_ano/chatbot-ui
+      volumes:
+        - ./rasa/purple_ano/chatbot-ui:/app/chatbot-ui
+      ports:
+        - 10012:8080
