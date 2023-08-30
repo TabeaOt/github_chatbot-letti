@@ -8,7 +8,7 @@ services:
       volumes:
         - "./rasa:/app"
       ports: 
-        - "10000:5005"
+        - "10020:5005"
     action_server:
       container_name: "action_server_orange"
       build: 
@@ -17,4 +17,4 @@ services:
         - ./rasa:/app/actions
         - ./rasa:/app/data
       ports:
-        - 10001:5055
+        - 10021:5055
