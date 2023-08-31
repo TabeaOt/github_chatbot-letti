@@ -68,7 +68,7 @@ class ActionErrorRisikofaktoren(Action):
 		# 	dispatcher.utter_message(buttons=[
 		# 		{'title': "Welche Spätfolgen gibt es?", 'payload': '/welche_spaetfolgen'}, # give options / no options
 		#         {'title': "Was sind die Risikofaktoren?", 'payload': '/welche_risikofaktoren'}])
-		# else:
+		else:
 			dispatcher.utter_message(text="Risikofaktoren sind Alter, Abwehrschwäche, Vorerkrankung und Eingriffe in den Körper, der Erregern als Eintrittspforte dient.")
 		return []
 
