@@ -17,7 +17,7 @@ services:
         - ./rasa/green_nano/actions:/app/actions
         - ./rasa/green_nano/data:/app/data
       ports:
-        - 10001:5045
+        - 10001:5055
     chatbot-ui:
       container_name: "chat-ui-green"
       build:
