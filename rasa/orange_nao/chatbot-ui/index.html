@@ -94,6 +94,18 @@
       border-color: #18a568;
      }
 
+    .chatbot-button-answer {
+      position: inherit;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      background-color: #ededed;
+      color: black;
+      border-radius: 4px;
+      padding: 5px;
+      height: auto;
+      font-size: 14px;
+    }
+
+
      </style>
   </head>
   <body>
@@ -128,6 +140,7 @@
       </div>
     </div>
     <script>
+      var sender = generateRandomString();
       document.getElementById('chatbot-enter-btn').addEventListener("click", handleInput);
       function enterKeyPressed(event) {
         if (event.keyCode == 13) {
@@ -145,7 +158,7 @@
               'Accept': 'application/json',
               'Content-Type': 'application/json'
           },
-          body: JSON.stringify({ "message": question, "sender": "orange" })
+          body: JSON.stringify({ "message": question, "sender": sender })
         })
         .then(function (response) {
           if(response.status = 200) return response.json();
@@ -154,11 +167,48 @@
           var length = response.length;
           if (length === 0) return;
           var i = 0;
-          while(i < length) {
-            addUtterance(response[i]['text'], 'chatbot-answer')
-            i++;
+          response.forEach(function (answer, index) {
+            if (answer.custom && answer.custom.endOfConversation) return;
+            if (answer.text) {
+              addUtterance(answer.text, 'chatbot-answer');
+            }
+            if (answer.buttons) {
+            document.getElementById('chatbot-typing-area').disabled = true;
+            document.getElementById('chatbot-enter-btn').disabled = true;
+            var buttons = answer.buttons;
+            buttons.forEach(function (button, index) {
+              addButtonUtterance(button.title, button.payload);
+            });
           }
+          })
         })
+      }
+
+      function addButtonUtterance(utterance, payload) {
+        var button = document.createElement('button');
+        button.type = 'button';
+        button.classList.add(
+          'chatbot-message-box',
+          'chatbot-answer',
+          'chatbot-button-answer',
+        );
+        button.innerHTML = utterance.trim();
+        button.onclick = function () {
+          document.getElementById('chatbot-typing-area').value = utterance.trim();
+          handleInput(payload);
+          var allButtons = document.getElementsByClassName('chatbot-button-answer');
+          while(allButtons[0]) {
+            allButtons[0].parentNode.removeChild(allButtons[0]);
+          }
+          document.getElementById('chatbot-typing-area').disabled = false;
+          document.getElementById('chatbot-enter-btn').disabled = false;
+        };
+
+        var placeholder = document.getElementById('utterance-placeholder')
+        var parentDiv = document.getElementById('conversation-parent')
+        parentDiv.insertBefore(button, placeholder);
+        var conversation = document.getElementById('conversation-parent');
+        conversation.scroll({ top: conversation.scrollHeight, behavior: 'smooth' });
       }
 
       function addUtterance(utterance, type) {
@@ -167,7 +217,20 @@
         message.innerHTML = utterance.trim();
         var placeholder = document.getElementById('utterance-placeholder')
         var parentDiv = document.getElementById('conversation-parent')
-        parentDiv.insertBefore(message, placeholder)
+        parentDiv.insertBefore(message, placeholder);
+        var conversation = document.getElementById('conversation-parent');
+        conversation.scroll({ top: conversation.scrollHeight, behavior: 'smooth' });
+      }
+
+      function generateRandomString() {
+        var result = '';
+        var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let charactersLength = characters.length;
+        for (var i = 0; i < 25; i++) {
+          result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+        result = 'orange-'+result;
+        return result;
       }
     </script>
 </body>
