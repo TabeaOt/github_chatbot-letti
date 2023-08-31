@@ -17,7 +17,7 @@ services:
         - ./rasa/purple_ano/actions:/app/actions
         - ./rasa/purple_ano/data:/app/data
       ports:
-        - 10011:5055
+        - 10011:5025
     chatbot-ui:
       container_name: "chat-ui-purple"
       build:

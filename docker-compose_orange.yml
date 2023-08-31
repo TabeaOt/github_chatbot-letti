@@ -17,7 +17,7 @@ services:
         - ./rasa/orange_nao/actions:/app/actions
         - ./rasa/orange_nao/data:/app/data
       ports:
-        - 10021:5055
+        - 10021:5035
     chatbot-ui:
       container_name: "chat-ui-orange"
       build:

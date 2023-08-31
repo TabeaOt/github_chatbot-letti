@@ -6,4 +6,4 @@ USER root
 
 RUN pip install --no-cache-dir PyYAML==5.4.1
 
-CMD ["start", "--actions", "actions", "--port", "5055"]
+CMD ["start", "--actions", "actions", "--port", "5025"]
