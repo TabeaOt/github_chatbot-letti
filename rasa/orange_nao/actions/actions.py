@@ -49,7 +49,7 @@ class ActionErrorSepsiserreger(Action):
 			dispatcher.utter_message(text="Das habe ich nicht verstanden. Kannst du auswählen, was du meinst?") # apology / no aplogy
 			dispatcher.utter_message(buttons=[
 				{'title': "Welche Sepsiserreger gibt es?", 'payload': '/was_sepsiserreger'}, # give options / no options
-		        {'title': "Was ist eine Sepsis", 'payload': '/was_sepsis'}])
+		        {'title': "Was ist eine Sepsis?", 'payload': '/was_sepsis'}])
 		else:
 			dispatcher.utter_message("Die häufigsten Sepsiserreger sind Bakterien. Am häufigsten gehen bakterielle Infektionen der Atemwege, des Verdauungstrakts und des Urogenitaltrakts mit einer Sepsis einher. Risikofaktoren sind Alter, Abwehrschwäche, Vorerkrankung und Eingriffe in den Körper, der Erregern als Eintrittspforte dient. Aber grundsätzlich kann jede bakterielle Infektion in eine Sepsis münden.")
 		return []
@@ -66,7 +66,7 @@ class ActionErrorRisikofaktoren(Action):
 		if slot < 2:
 			dispatcher.utter_message(text="Das habe ich nicht verstanden. Kannst du auswählen, was du meinst?") # apology / no aplogy
 			dispatcher.utter_message(buttons=[
-				{'title': "Können nach einer Sepsis Spätfolgen auftreten?", 'payload': '/welche_spaetfolgen'}, # give options / no options
+				{'title': "Was ist eine Sepsis?", 'payload': '/was_sepsis'}, # give options / no options
 		        {'title': "Welche Risikofaktoren für Sepsis gibt es?", 'payload': '/welche_risikofaktoren'}])
 		else:
 			dispatcher.utter_message(text="Risikofaktoren sind Alter, Abwehrschwäche, Vorerkrankung und Eingriffe in den Körper, der Erregern als Eintrittspforte dient.")
